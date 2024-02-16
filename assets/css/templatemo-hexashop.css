@@ -617,8 +617,7 @@ header
   background-color: var(--primary-color);
   color: #fff;
 }
-
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
   .header-area .main-nav .nav li {
     padding-left: 12px;
     padding-right: 12px;
@@ -628,7 +627,7 @@ header
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
   .header-area .main-nav .logo {
     color: #1e1e1e;
   }
@@ -642,7 +641,7 @@ header
   }
   .header-area {
     background-color: #f7f7f7;
-    padding: 0px 15px;
+    /* padding: 0px 15px; */
     height: 100px;
     box-shadow: none;
     text-align: center;
@@ -726,12 +725,16 @@ header
   .header-area .main-nav .nav li.submenu:focus ul {
     height: 0px;
   }
+  /* .header-area .main-nav .nav {
+    display: flex !important;
+  } */
+}
+
+@media (max-width: 767px) {
 }
 
 @media (min-width: 767px) {
-  .header-area .main-nav .nav {
-    display: flex !important;
-  }
+
 }
 
 /* 
@@ -934,11 +937,14 @@ Men
 }
 
 #men .owl-nav {
-  text-align: center;
+  /* text-align: center;
   position: absolute;
   width: 100%;
   top: 40%;
-  transform: translateY(-25px);
+  transform: translateY(-25px); */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 #men .owl-dots {
@@ -946,9 +952,10 @@ Men
 }
 
 #men .owl-nav .owl-prev {
-  position: absolute;
+  /* position: absolute;
   left: -80px;
-  outline: none;
+  outline: none; */
+  /* background-color: red; */
 }
 
 #men .owl-nav .owl-prev span,
@@ -989,9 +996,9 @@ Men
 }
 
 #men .owl-nav .owl-next {
-  outline: none;
+  /* outline: none;
   position: absolute;
-  right: -85px;
+  right: -85px; */
 }
 
 #men .owl-nav .owl-next:before {
@@ -1093,11 +1100,14 @@ Women
 }
 
 #women .owl-nav {
-  text-align: center;
+  /* text-align: center;
   position: absolute;
   width: 100%;
   top: 40%;
-  transform: translateY(-25px);
+  transform: translateY(-25px); */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 #women .owl-dots {
@@ -1105,9 +1115,9 @@ Women
 }
 
 #women .owl-nav .owl-prev {
-  position: absolute;
+  /* position: absolute;
   left: -80px;
-  outline: none;
+  outline: none; */
 }
 
 #women .owl-nav .owl-prev span,
@@ -1148,9 +1158,9 @@ Women
 }
 
 #women .owl-nav .owl-next {
-  outline: none;
+  /* outline: none;
   position: absolute;
-  right: -85px;
+  right: -85px; */
 }
 
 #women .owl-nav .owl-next:before {
@@ -1252,11 +1262,14 @@ Kids
 }
 
 #kids .owl-nav {
-  text-align: center;
+  /* text-align: center;
   position: absolute;
   width: 100%;
   top: 40%;
-  transform: translateY(-25px);
+  transform: translateY(-25px); */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 #kids .owl-dots {
@@ -1264,9 +1277,9 @@ Kids
 }
 
 #kids .owl-nav .owl-prev {
-  position: absolute;
+  /* position: absolute;
   left: -80px;
-  outline: none;
+  outline: none; */
 }
 
 #kids .owl-nav .owl-prev span,
@@ -1307,9 +1320,9 @@ Kids
 }
 
 #kids .owl-nav .owl-next {
-  outline: none;
+  /* outline: none;
   position: absolute;
-  right: -85px;
+  right: -85px; */
 }
 
 #kids .owl-nav .owl-next:before {
@@ -2302,13 +2315,27 @@ responsive
 --------------------------------------------- 
 */
 
+@media (min-width: 1400px){
+  
+}
+@media (max-width: 1400px){
+  
+}
+
 @media (max-width: 1200px) {
   .main-banner .right-content .right-first-image .thumb .hover-content p {
     display: none;
   }
+  .main-banner .left-content .inner-content h4{
+    font-size: 38px;
+  }
 }
 
+
 @media (max-width: 992px) {
+  .main-banner .left-content .inner-content h4{
+    font-size: 46px;
+  }
   .main-banner .right-content .right-first-image .thumb .hover-content p {
     display: block;
   }
@@ -2359,6 +2386,9 @@ responsive
 }
 
 @media (max-width: 767px) {
+  .main-banner .left-content .inner-content h4{
+    font-size: 46px;
+  }
   .main-banner .left-content .thumb .inner-content {
     left: 50%;
     top: 47.5%;
@@ -2373,6 +2403,12 @@ responsive
   }
   footer h4 {
     margin-top: 30px;
+  }
+}
+
+@media (max-width: 576px){
+  .main-banner .left-content .inner-content h4{
+    font-size: 32px;
   }
 }
 

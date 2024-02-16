@@ -177,7 +177,7 @@
 	function mobileNav() {
 		var width = $(window).width();
 		$('.submenu').on('click', function() {
-			if(width < 767) {
+			if(width < 1199) {
 				$('.submenu ul').removeClass('active');
 				$(this).find('ul').toggleClass('active');
 			}
