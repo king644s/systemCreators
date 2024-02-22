@@ -30,6 +30,9 @@ Table of contents
 :root {
   --primary-color: #3e4095;
 }
+.color-primary {
+  color: var(--primary-color);
+}
 
 /* 
 ---------------------------------------------
@@ -180,7 +183,7 @@ ul {
 p {
   font-size: 14px;
   line-height: 25px;
-  color: #2a2a2a;
+  color: var(--primary-color);
 }
 
 /* 
@@ -195,12 +198,12 @@ body {
 }
 
 ::selection {
-  background: #2a2a2a;
+  background: var(--primary-color);
   color: #fff;
 }
 
 ::-moz-selection {
-  background: #2a2a2a;
+  background: var(--primary-color);
   color: #fff;
 }
 
@@ -223,8 +226,8 @@ body {
 
 .main-border-button a {
   font-size: 13px;
-  color: #fff;
-  border: 1px solid #fff;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
   padding: 12px 25px;
   display: inline-block;
   font-weight: 500;
@@ -232,8 +235,8 @@ body {
 }
 
 .main-border-button a:hover {
-  background-color: #fff;
-  color: #2a2a2a;
+  background-color: var(--primary-color);
+  color: #fff;
 }
 
 .main-white-button a {
@@ -306,7 +309,7 @@ header
 }
 
 .header-area {
-  border-bottom: 3px dotted #eee;
+  border-bottom: 3px solid #eee;
   box-shadow: none;
   background-color: #fff;
   position: absolute;
@@ -734,7 +737,6 @@ header
 }
 
 @media (min-width: 767px) {
-
 }
 
 /* 
@@ -744,11 +746,18 @@ banner
 */
 
 .main-banner {
-  border-bottom: 3px dotted #eee;
+  border-bottom: 3px solid #eee;
   padding-top: 160px;
   padding-bottom: 30px;
 }
 
+.main-banner .left-content {
+  padding-bottom: 28.5px;
+}
+
+.main-banner .left-content .thumb {
+  border: 1px solid var(--primary-color);
+}
 .main-banner .left-content .thumb img {
   width: 100%;
   overflow: hidden;
@@ -762,7 +771,7 @@ banner
 }
 
 .main-banner .left-content .inner-content h4 {
-  color: #fff;
+  color: var(--primary-color);
   margin-top: -10px;
   font-size: 52px;
   font-weight: 700;
@@ -771,7 +780,7 @@ banner
 
 .main-banner .left-content .inner-content span {
   font-size: 16px;
-  color: #fff;
+  color: var(--primary-color);
   font-weight: 400;
   font-style: italic;
   display: block;
@@ -781,15 +790,24 @@ banner
 .main-banner .right-content .right-first-image {
   margin-bottom: 28.5px;
 }
+.main-banner .right-content .right-first-image .download-section {
+  border: 1px solid var(--primary-color); 
+}
+.main-banner .right-content .right-first-image .download-section:hover {
+  border-left-width: 5px;
+}
 
 .main-banner .right-content .right-first-image .thumb {
   position: relative;
   text-align: center;
+  aspect-ratio: 1;
 }
 
 .main-banner .right-content .right-first-image .thumb img {
   width: 100%;
   overflow: hidden;
+  aspect-ratio: 1;
+  object-fit: cover;
 }
 
 .main-banner .right-content .right-first-image .thumb .inner-content {
@@ -797,7 +815,7 @@ banner
   top: 50%;
   transform: translateY(-50%);
   width: 100%;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .main-banner .right-content .right-first-image .thumb .inner-content h4 {
@@ -807,10 +825,23 @@ banner
   margin-bottom: 15px;
 }
 
+.main-banner .right-content .right-first-image .thumb .download {
+  padding: 0 50px;
+  text-align: right;
+}
+
+.main-banner .right-content .right-first-image .thumb .download h4 {
+  text-align: left;
+  color: var(--primary-color);
+}
+
 .main-banner .right-content .right-first-image .thumb .inner-content span {
   font-size: 16px;
   color: #fff;
   font-style: italic;
+}
+.main-banner .right-content .right-first-image .thumb .download span {
+  color: var(--primary-color);
 }
 
 .main-banner .right-content .right-first-image .thumb .hover-content {
@@ -861,7 +892,7 @@ Men
 #men {
   padding-top: 90px;
   padding-bottom: 90px;
-  border-bottom: 3px dotted #eee;
+  border-bottom: 3px solid #eee;
 }
 
 #men .section-heading {
@@ -1024,7 +1055,7 @@ Women
 #women {
   padding-top: 90px;
   padding-bottom: 90px;
-  border-bottom: 3px dotted #eee;
+  border-bottom: 3px solid #eee;
 }
 
 #women .section-heading {
@@ -1186,7 +1217,7 @@ Kids
 #kids {
   padding-top: 90px;
   padding-bottom: 90px;
-  border-bottom: 3px dotted #eee;
+  border-bottom: 3px solid #eee;
 }
 
 #kids .section-heading {
@@ -1348,7 +1379,7 @@ Explore
 #explore {
   padding-top: 90px;
   padding-bottom: 90px;
-  border-bottom: 3px dotted #eee;
+  border-bottom: 3px solid #eee;
 }
 
 #explore .left-content {
@@ -1452,7 +1483,7 @@ Social
 #social {
   margin-top: 90px;
   padding-bottom: 90px;
-  border-bottom: 3px dotted #eee;
+  border-bottom: 3px solid #eee;
 }
 
 #social .col-2 {
@@ -2071,7 +2102,7 @@ About Us Page
 }
 
 .about-us .right-content ul {
-  border-top: 3px dotted #eee;
+  border-top: 3px solid #eee;
   margin-top: 30px;
   padding-top: 30px;
 }
@@ -2102,7 +2133,7 @@ About Us Page
   margin-top: 100px;
   padding-top: 90px;
   padding-bottom: 90px;
-  border-top: 3px dotted #eee;
+  border-top: 3px solid #eee;
 }
 
 .our-team .section-heading {
@@ -2193,8 +2224,8 @@ About Us Page
 .our-services {
   padding-top: 90px;
   padding-bottom: 90px;
-  border-top: 3px dotted #eee;
-  border-bottom: 3px dotted #eee;
+  border-top: 3px solid #eee;
+  border-bottom: 3px solid #eee;
 }
 
 .our-services .section-heading {
@@ -2236,7 +2267,7 @@ contact Us Page
 
 .contact-us {
   margin-top: 90px;
-  border-bottom: 3px dotted #eee;
+  border-bottom: 3px solid #eee;
   padding-bottom: 90px;
 }
 
@@ -2315,25 +2346,22 @@ responsive
 --------------------------------------------- 
 */
 
-@media (min-width: 1400px){
-  
+@media (min-width: 1400px) {
 }
-@media (max-width: 1400px){
-  
+@media (max-width: 1400px) {
 }
 
 @media (max-width: 1200px) {
   .main-banner .right-content .right-first-image .thumb .hover-content p {
     display: none;
   }
-  .main-banner .left-content .inner-content h4{
+  .main-banner .left-content .inner-content h4 {
     font-size: 38px;
   }
 }
 
-
 @media (max-width: 992px) {
-  .main-banner .left-content .inner-content h4{
+  .main-banner .left-content .inner-content h4 {
     font-size: 46px;
   }
   .main-banner .right-content .right-first-image .thumb .hover-content p {
@@ -2386,7 +2414,7 @@ responsive
 }
 
 @media (max-width: 767px) {
-  .main-banner .left-content .inner-content h4{
+  .main-banner .left-content .inner-content h4 {
     font-size: 46px;
   }
   .main-banner .left-content .thumb .inner-content {
@@ -2406,8 +2434,8 @@ responsive
   }
 }
 
-@media (max-width: 576px){
-  .main-banner .left-content .inner-content h4{
+@media (max-width: 576px) {
+  .main-banner .left-content .inner-content h4 {
     font-size: 32px;
   }
 }
